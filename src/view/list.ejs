@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cartas Seguras </title>
+    </head>
+    <body>
+        <a href="write"> Escrever uma carta </a>
+
+        <% for(const letter of letters) {%>
+            <form action="see" class="letter">
+                <div class="subject-box">
+                    <p> <%= letter.subject %></p>
+                </div>
+                <div class="password-box">
+                    <input name="password" type="text" placeholder="Chave para descriptografar">
+                    <button>Enviar</button>
+                </div>
+                <input name="id" type="hidden" value="<%= letter.id %>">
+            </form>
+        <% } %>
+
+    </body>
+</html>
