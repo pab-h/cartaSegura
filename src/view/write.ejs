@@ -4,24 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Carta segura </title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <form method="post" action="write">
-            <div>
-                <label for="subject"> Subject </label>
-                <input id="subject" name="subject" type="text">
-            </div>
-            <div>
-                <label for="content"> Content </label>
-                <textarea id="content" name="content"></textarea>
-            </div>
-            <div>
-                <label for="password"> Password </label>
-                <textarea id="password" name="password"></textarea>
-            </div>
 
-            <button type="submit">Enviar</button>
+    <body class="w-screen min-h-screen flex flex-col items-center justify-center  bg-[#2B324E]">
+        
+        <h1 class=" text-2xl text-[#F7B176] py-8 ">Escreva sua carta</h1>
 
-        </form>
+        <div class="mb-[2rem] bg-[#424769] w-[22rem] min-h-[20rem] rounded-2xl flex flex-col items-center p-[2rem]">    
+            <form method="post" action="write" class="flex flex-col items-center">
+                
+                <div class="flex flex-col my-2">
+                    <label for="subject" class="text-white"> Assunto </label>
+                    <input id="subject" name="subject" type="text" class="px-1 border-l-4 border-[#F7B176] rounded-sm w-[14rem]">
+                </div>
+
+                <div class="flex flex-col my-2">
+                    <label for="content" class="text-white"> Conteúdo </label>
+                    <textarea id="content" name="content" class=" px-1 min-h-[6rem] border-l-4 border-[#F7B176] rounded-sm w-[14rem] "></textarea>
+                </div>
+
+                <div class="flex flex-col my-2">
+                    <label for="password" class="text-white"> Senha </label>
+                    <textarea id="password" name="password" class="px-1 border-l-4 border-[#F7B176] rounded-sm w-[14rem]"></textarea>
+                </div>
+                
+                <button type="submit" class="my-8 px-6 py-2 bg-[#F7B176] rounded-2xl">Enviar</button>
+            </form>
+        </div>
     </body>
 </html>

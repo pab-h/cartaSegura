@@ -4,16 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Carta segura </title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    
+    <body class="w-screen min-h-screen flex flex-col items-center justify-center  bg-[#2B324E]">
+        <h1 class=" text-2xl text-[#F7B176] py-8 ">Sua carta</h1>
+
+        <div class="mb-[2rem] bg-[#424769] w-[22rem] min-h-[20rem] rounded-2xl flex flex-col items-center p-[2rem]">    
+        
         <div class="letter">
-            <div class="subject-box">
-                <p> <%= letter.subject %></p>
+            
+            <div class="subject-box flex flex-col my-2">
+                <label for="subject" class="text-white"> Assunto: </label>
+                <p class="border-l-4 border-[#F7B176] rounded-sm w-[14rem] bg-[#F7B176] py-2 text-center text-lg font-bold "> <%= letter.subject %></p>
             </div>
-            <div class="content">
-                <%= letter.content %>
+
+            <div class="content flex flex-col my-2">
+                <label for="subject" class="text-white"> Conteúdo: </label>
+                <p class="min-h-[4rem] border-l-4 border-[#F7B176] px-2 rounded-sm w-[14rem] bg-white py-2 text-justify break-words"><%= letter.content %></p>
             </div>
         </div>
-        <a href="/"><button>Voltar</button></a>
+        <a href="/" class="my-8 px-8 py-2 bg-[#F7B176] rounded-2xl"><button>Voltar</button></a>
     </body>
 </html>
